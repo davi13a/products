@@ -7,10 +7,10 @@ while True:
     #p = []
     #p.append(name)
     #p.append(price)
-    p = [name, price]
-    products.append(p)
-    #products.append([name, price])
-print(products)
+    #p = [name, price]
+    #products.append(p)
+    products.append([name, price])
+#print(products)
 
 #products[0][0]
 #products[1][0]
@@ -18,3 +18,12 @@ print(products)
 for pp in products:
     print(pp[0], '的價格是', pp[1])
 
+
+with open('products.txt', 'w') as f:
+    for p in products:
+        f.write(p[0] + ' 的價格是： ' + p[1] + '\n')
+
+
+#with open('products.csv', 'w') as f:
+    #for p in products:
+        #f.write(p[0] + ',' + p[1] + '\n')
